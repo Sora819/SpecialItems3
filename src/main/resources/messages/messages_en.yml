@@ -6,6 +6,7 @@ error:
   command_load: "Error when initializing command: "
   subcommand_load: "Error when initializing subcommand: "
   listener_load: "Error when initializing event listener: "
+  permission_denied: "You have no permission to do this!"
 success:
   command_run: "Command successfully run"
   command_load: "Command successfully loaded: "

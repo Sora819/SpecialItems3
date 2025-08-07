@@ -42,6 +42,11 @@ public class SpecialItemsCommand implements ICommand {
             return true;
         }
 
+        if (subCommand.getPermission() != null && !sender.hasPermission(subCommand.getPermission())) {
+            sender.sendMessage(LocalizationHandler.getMessage("error.permission_denied", true));
+            return true;
+        }
+
         subCommand.execute(sender, cmd, label, args);
         return true;
     }

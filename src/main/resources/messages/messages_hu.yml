@@ -6,6 +6,7 @@ error:
   command_load: "Hiba történt a következő parancs inicializálása közben: "
   subcommand_load: "Hiba történt a következő alparancs inicializálása közben: "
   listener_load: "Hiba történt a következő eseményfigyelő inicializálása közben: "
+  permission_denied: "Ehhez nincs jogod!"
 success:
   command_run: "Parancs sikeresen futtatva"
   command_load: "Parancs sikeresen betöltve: "
