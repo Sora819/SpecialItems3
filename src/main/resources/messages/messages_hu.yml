@@ -7,6 +7,7 @@ error:
   subcommand_load: "Hiba történt a következő alparancs inicializálása közben: "
   listener_load: "Hiba történt a következő eseményfigyelő inicializálása közben: "
   permission_denied: "Ehhez nincs jogod!"
+  item_load: "Hiba történt a következő tárgy inicializálása közben: "
 success:
   command_run: "Parancs sikeresen futtatva"
   command_load: "Parancs sikeresen betöltve: "
@@ -14,11 +15,13 @@ success:
   listener_load: "Eseményfigyelő sikeresen betöltve: "
   language_set: "Nyelv sikeresen átállítva magyarra"
   reload: "Konfiguráció újratöltve"
+  item_load: "Tárgy sikeresen betöltve: "
 plugin:
   enabled: "Plugin betöltve"
   disabled: "Plugin leállítva"
-chat:
-  sent: " küldött egy üzenetet"
-subcommand:
-  test: "Alparancs sikeres végrehajtása a következő argumentumokkal: "
-  test2: "Ezt az üzenetet kaptad: "
+command:
+  item_given: "Megkaptad a következő tárgyat: "
+item:
+  flying_boots:
+    name: "Repülő cipő"
+    lore: "Ha felveszed a cipőt, tudsz majd repülni"
