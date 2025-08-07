@@ -1,7 +1,6 @@
 package me.sora819.specialitems.items;
 
 import me.sora819.specialitems.SpecialItems;
-import me.sora819.specialitems.localization.LocalizationHandler;
 import me.sora819.specialitems.utils.NBTManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -20,18 +19,8 @@ import java.util.List;
 public class FlyingBoots implements ICustomItem, Listener {
 
     @Override
-    public String getName() {
-        return LocalizationHandler.getMessage("item.flying_boots.name");
-    }
-
-    @Override
     public String getID() {
         return "flying_boots";
-    }
-
-    @Override
-    public List<String> getLore() {
-        return List.of(LocalizationHandler.getMessage("item.flying_boots.lore"));
     }
 
     @Override
@@ -50,17 +39,6 @@ public class FlyingBoots implements ICustomItem, Listener {
         NBTManager.setNBT(base_item, "custom_item", getID());
 
         return base_item;
-    }
-
-    @Override
-    public boolean checkItem(ItemStack item) {
-        if (item == null) {
-            return false;
-        }
-
-        String custom_id = NBTManager.getNBT(item, "custom_item");
-
-        return custom_id != null && custom_id.equalsIgnoreCase(getID());
     }
 
     @EventHandler
