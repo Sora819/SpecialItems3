@@ -1,5 +1,6 @@
 package me.sora819.specialitems;
 
+import me.sora819.specialitems.items.ItemRegistry;
 import me.sora819.specialitems.localization.LocalizationHandler;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.TabCompleter;
@@ -21,6 +22,7 @@ public final class SpecialItems extends JavaPlugin {
     public void onEnable() {
         setCommandExecutors();
         registerListeners();
+        ItemRegistry.registerCustomItems();
 
         getLogger().info(LocalizationHandler.getMessage("plugin.enabled"));
     }
