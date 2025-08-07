@@ -1,0 +1,15 @@
+name: '${project.name}'
+version: '${project.version}'
+main: me.sora819.sampleplugin.SamplePlugin
+api-version: '1.21'
+author: 'Sora819'
+
+commands:
+  example:
+    usage: '/<command> <message>'
+  language:
+    usage: '/<command> <language short code>'
+  exampleReload:
+    usage: '/<command>'
+  exampleMain:
+    usage: '/<command> <subcommand>'

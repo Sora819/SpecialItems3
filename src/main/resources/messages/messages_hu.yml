@@ -1,0 +1,23 @@
+error:
+  must_be_player: "Játékosnak kell lenned a parancs használatához"
+  player_not_found: "Játékos nem található"
+  invalid_argument_count: "Hibás argumentumszám"
+  invalid_usage: "Hibás parancshasználat"
+  command_load: "Hiba történt a következő parancs inicializálása közben: "
+  subcommand_load: "Hiba történt a következő alparancs inicializálása közben: "
+  listener_load: "Hiba történt a következő eseményfigyelő inicializálása közben: "
+success:
+  command_run: "Parancs sikeresen futtatva"
+  command_load: "Parancs sikeresen betöltve: "
+  subcommand_load: "Alparancs sikeresen betöltve: "
+  listener_load: "Eseményfigyelő sikeresen betöltve: "
+  language_set: "Nyelv sikeresen átállítva magyarra"
+  reload: "Konfiguráció újratöltve"
+plugin:
+  enabled: "Plugin betöltve"
+  disabled: "Plugin leállítva"
+chat:
+  sent: " küldött egy üzenetet"
+subcommand:
+  test: "Alparancs sikeres végrehajtása a következő argumentumokkal: "
+  test2: "Ezt az üzenetet kaptad: "

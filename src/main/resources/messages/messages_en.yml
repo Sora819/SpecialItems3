@@ -1,0 +1,23 @@
+error:
+  must_be_player: "Must be a player to use this command"
+  player_not_found: "Player not found"
+  invalid_argument_count: "Invalid number of arguments"
+  invalid_usage: "Invalid usage of command"
+  command_load: "Error when initializing command: "
+  subcommand_load: "Error when initializing subcommand: "
+  listener_load: "Error when initializing event listener: "
+success:
+  command_run: "Command successfully run"
+  command_load: "Command successfully loaded: "
+  subcommand_load: "Subcommand successfully loaded: "
+  listener_load: "Event listener successfully loaded: "
+  language_set: "Language successfully changed to english"
+  reload: "Configuration reloaded"
+plugin:
+  enabled: "Plugin enabled"
+  disabled: "Plugin disabled"
+chat:
+  sent: " sent a message"
+subcommand:
+  test: "Successful subcommand execution with args: "
+  test2: "You got this message: "
