@@ -48,6 +48,7 @@ public class FlyingBoots implements ICustomItem, Listener {
 
     @EventHandler
     public void onEquipArmorFromInventory(InventoryClickEvent e) {
+        // We have to wait for the next tick, so that we can check the new state of the inventory
         Bukkit.getScheduler().runTask(SpecialItems.getInstance(), () -> {
             Player player = (Player)e.getWhoClicked();
             player.setAllowFlight(checkItem(player.getInventory().getBoots()));
