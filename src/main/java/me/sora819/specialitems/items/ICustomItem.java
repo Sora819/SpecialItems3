@@ -2,16 +2,45 @@ package me.sora819.specialitems.items;
 
 import me.sora819.specialitems.config.ConfigHandler;
 import me.sora819.specialitems.localization.LocalizationHandler;
+import me.sora819.specialitems.utils.CustomRecipe;
 import me.sora819.specialitems.utils.NBTManager;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.Recipe;
+import org.bukkit.configuration.ConfigurationSection;
+import org.bukkit.inventory.*;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public interface ICustomItem {
     String getID();
     ItemStack getItemStack();
-    List<Recipe> getRecipes();
+
+    default Set<CustomRecipe> getRecipes() throws Exception {
+        Set<String> recipeIDs = ConfigHandler.recipesConfig.getKeys();
+
+        recipeIDs = recipeIDs.stream()
+                .filter(id -> ItemRegistry.getItemIDs().contains(ConfigHandler.recipesConfig.<String>get(id + ".result")))
+                .collect(Collectors.toSet());
+
+        Set<CustomRecipe> recipes = new HashSet<>();
+
+        for (String recipeID : recipeIDs) {
+            if (recipeID == null) {
+                continue;
+            }
+
+            ConfigurationSection recipeConfig = ConfigHandler.recipesConfig.get(recipeID);
+
+            CustomRecipe recipe = new CustomRecipe(recipeID, recipeConfig);
+
+            recipes.add(recipe);
+        }
+
+        return recipes;
+    }
+
+
 
     default String getName() {
         return LocalizationHandler.getMessage("item." + getID() + ".name");

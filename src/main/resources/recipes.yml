@@ -1,0 +1,11 @@
+flying_boots:
+  type: shaped
+  shape:
+    - " E "
+    - " S "
+    - " N "
+  ingredients:
+    E: ELYTRA
+    S: NETHER_STAR
+    N: NETHERITE_BOOTS
+  result: "flying_boots"

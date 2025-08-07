@@ -14,8 +14,6 @@ import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.List;
-
 public class FlyingBoots implements ICustomItem, Listener {
 
     @Override
