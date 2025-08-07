@@ -1,8 +1,8 @@
-package me.sora819.sampleplugin.localization;
+package me.sora819.specialitems.localization;
 
-import me.sora819.sampleplugin.config.ConfigAdapter;
-import me.sora819.sampleplugin.config.ConfigHandler;
-import me.sora819.sampleplugin.config.LocalizationConfig;
+import me.sora819.specialitems.config.ConfigAdapter;
+import me.sora819.specialitems.config.ConfigHandler;
+import me.sora819.specialitems.config.LocalizationConfig;
 import org.bukkit.ChatColor;
 
 public class LocalizationHandler {

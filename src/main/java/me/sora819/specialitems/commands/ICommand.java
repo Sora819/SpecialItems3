@@ -1,4 +1,4 @@
-package me.sora819.sampleplugin.commands;
+package me.sora819.specialitems.commands;
 
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.TabCompleter;

@@ -1,6 +1,6 @@
-package me.sora819.sampleplugin.config;
+package me.sora819.specialitems.config;
 
-import me.sora819.sampleplugin.SamplePlugin;
+import me.sora819.specialitems.SpecialItems;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -12,39 +12,39 @@ import java.util.Set;
 
 public class DefaultConfig implements ConfigAdapter{
     public DefaultConfig() {
-        SamplePlugin.getInstance().saveDefaultConfig();
+        SpecialItems.getInstance().saveDefaultConfig();
 
         addDefaults();
     }
 
     private void addDefaults() {
-        InputStream defaultFile = SamplePlugin.getInstance().getResource("config.yml");
+        InputStream defaultFile = SpecialItems.getInstance().getResource("config.yml");
 
         if (defaultFile != null) {
             FileConfiguration defaults = YamlConfiguration.loadConfiguration(
                     new InputStreamReader(defaultFile, StandardCharsets.UTF_8));
 
-            SamplePlugin.getInstance().getConfig().addDefaults(defaults);
-            SamplePlugin.getInstance().getConfig().options().copyDefaults(true);
+            SpecialItems.getInstance().getConfig().addDefaults(defaults);
+            SpecialItems.getInstance().getConfig().options().copyDefaults(true);
             save();
         }
     }
 
     @Override
     public void reload() {
-        SamplePlugin.getInstance().reloadConfig();
+        SpecialItems.getInstance().reloadConfig();
 
         addDefaults();
     }
 
     @Override
     public void save() {
-        SamplePlugin.getInstance().saveConfig();
+        SpecialItems.getInstance().saveConfig();
     }
 
     @Override
     public <T> T get(String path) {
-        return (T)SamplePlugin.getInstance().getConfig().get(path);
+        return (T) SpecialItems.getInstance().getConfig().get(path);
     }
 
     @Override
@@ -54,21 +54,21 @@ public class DefaultConfig implements ConfigAdapter{
 
     @Override
     public <T> void set(String path, T value) {
-        SamplePlugin.getInstance().getConfig().set(path, value);
+        SpecialItems.getInstance().getConfig().set(path, value);
         save();
     }
 
     @Override
     public boolean has(String path) {
-        return SamplePlugin.getInstance().getConfig().contains(path);
+        return SpecialItems.getInstance().getConfig().contains(path);
     }
 
     public Set<String> getKeys() {
-        return SamplePlugin.getInstance().getConfig().getKeys(false);
+        return SpecialItems.getInstance().getConfig().getKeys(false);
     }
 
     public Set<String> getKeys(String path) {
-        ConfigurationSection section = SamplePlugin.getInstance().getConfig().getConfigurationSection(path);
+        ConfigurationSection section = SpecialItems.getInstance().getConfig().getConfigurationSection(path);
 
         if (section != null) {
             return section.getKeys(false);

@@ -1,6 +1,6 @@
-package me.sora819.sampleplugin.commands.subcommands;
+package me.sora819.specialitems.commands.subcommands;
 
-import me.sora819.sampleplugin.localization.LocalizationHandler;
+import me.sora819.specialitems.localization.LocalizationHandler;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 

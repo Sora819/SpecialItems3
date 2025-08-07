@@ -1,4 +1,4 @@
-package me.sora819.sampleplugin.commands.subcommands;
+package me.sora819.specialitems.commands.subcommands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

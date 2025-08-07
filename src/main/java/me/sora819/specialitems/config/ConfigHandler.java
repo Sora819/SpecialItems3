@@ -1,6 +1,6 @@
-package me.sora819.sampleplugin.config;
+package me.sora819.specialitems.config;
 
-import me.sora819.sampleplugin.localization.LocalizationHandler;
+import me.sora819.specialitems.localization.LocalizationHandler;
 
 public class ConfigHandler {
     public static ConfigAdapter defaultConfig = new DefaultConfig();

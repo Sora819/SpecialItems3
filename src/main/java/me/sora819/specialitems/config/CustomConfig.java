@@ -1,12 +1,10 @@
-package me.sora819.sampleplugin.config;
+package me.sora819.specialitems.config;
 
-import me.sora819.sampleplugin.SamplePlugin;
-import me.sora819.sampleplugin.localization.LocalizationHandler;
+import me.sora819.specialitems.SpecialItems;
+import me.sora819.specialitems.localization.LocalizationHandler;
 import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.yaml.snakeyaml.Yaml;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,12 +24,12 @@ public class CustomConfig implements ConfigAdapter{
 
 
     public CustomConfig(String sourceFileName, String targetFileName) {
-        this.targetFile = new File(SamplePlugin.getInstance().getDataFolder(), targetFileName);
+        this.targetFile = new File(SpecialItems.getInstance().getDataFolder(), targetFileName);
         this.sourceFile = sourceFileName;
 
         if (!targetFile.exists()) {
             targetFile.getParentFile().mkdirs();
-            SamplePlugin.getInstance().saveResource(sourceFile, false);
+            SpecialItems.getInstance().saveResource(sourceFile, false);
         }
 
         config = YamlConfiguration.loadConfiguration(targetFile);
@@ -40,7 +38,7 @@ public class CustomConfig implements ConfigAdapter{
     }
 
     private void addDefaults() {
-        InputStream defaultFile = SamplePlugin.getInstance().getResource(sourceFile);
+        InputStream defaultFile = SpecialItems.getInstance().getResource(sourceFile);
 
         if (defaultFile != null) {
             FileConfiguration defaults = YamlConfiguration.loadConfiguration(
@@ -63,7 +61,7 @@ public class CustomConfig implements ConfigAdapter{
         try {
             config.save(targetFile);
         } catch (IOException e) {
-            SamplePlugin.getInstance().getLogger().warning(LocalizationHandler.getMessage("error.save_custom_config"));
+            SpecialItems.getInstance().getLogger().warning(LocalizationHandler.getMessage("error.save_custom_config"));
         }
     }
 

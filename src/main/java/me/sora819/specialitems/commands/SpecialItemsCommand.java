@@ -1,15 +1,15 @@
-package me.sora819.sampleplugin.commands;
+package me.sora819.specialitems.commands;
 
-import me.sora819.sampleplugin.SamplePlugin;
-import me.sora819.sampleplugin.commands.subcommands.ISubCommand;
-import me.sora819.sampleplugin.localization.LocalizationHandler;
+import me.sora819.specialitems.SpecialItems;
+import me.sora819.specialitems.commands.subcommands.ISubCommand;
+import me.sora819.specialitems.localization.LocalizationHandler;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.reflections.Reflections;
 
 import java.util.*;
 
-public class ExampleMainCommand implements ICommand {
+public class SpecialItemsCommand implements ICommand {
     private static final Map<String, ISubCommand> subCommands = new HashMap<>();
 
     static {
@@ -17,7 +17,7 @@ public class ExampleMainCommand implements ICommand {
     }
 
     private static void autoRegisterSubCommands() {
-        String packageName = ExampleMainCommand.class.getPackage().getName() + ".subcommands";
+        String packageName = SpecialItemsCommand.class.getPackage().getName() + ".subcommands";
         Reflections reflections = new Reflections(packageName);
         Set<Class<? extends ISubCommand>> classes = reflections.getSubTypesOf(ISubCommand.class);
 
@@ -25,10 +25,10 @@ public class ExampleMainCommand implements ICommand {
             try {
                 ISubCommand cmd = clazz.getDeclaredConstructor().newInstance();
                 subCommands.put(cmd.getName().toLowerCase(), cmd);
-                SamplePlugin.getInstance().getLogger().info(LocalizationHandler.getMessage("success.subcommand_load") + cmd.getName());
+                SpecialItems.getInstance().getLogger().info(LocalizationHandler.getMessage("success.subcommand_load") + cmd.getName());
             } catch (Exception e) {
-                SamplePlugin.getInstance().getLogger().warning(LocalizationHandler.getMessage("error.subcommand_load") + clazz.getSimpleName());
-                SamplePlugin.getInstance().getLogger().warning(e.toString());
+                SpecialItems.getInstance().getLogger().warning(LocalizationHandler.getMessage("error.subcommand_load") + clazz.getSimpleName());
+                SpecialItems.getInstance().getLogger().warning(e.toString());
             }
         }
     }

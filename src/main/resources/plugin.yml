@@ -1,15 +1,12 @@
 name: '${project.name}'
 version: '${project.version}'
-main: me.sora819.sampleplugin.SamplePlugin
+main: me.sora819.specialitems.SpecialItems
 api-version: '1.21'
 author: 'Sora819'
 
 commands:
-  example:
-    usage: '/<command> <message>'
-  language:
-    usage: '/<command> <language short code>'
-  exampleReload:
-    usage: '/<command>'
-  exampleMain:
-    usage: '/<command> <subcommand>'
+  specialItems:
+    usage: '/<command> <subcommand> [<parameters>]'
+    aliases:
+      - speciali
+      - si

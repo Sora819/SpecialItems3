@@ -1,4 +1,4 @@
-package me.sora819.sampleplugin.config;
+package me.sora819.specialitems.config;
 
 import java.util.Set;
 

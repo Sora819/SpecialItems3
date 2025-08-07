@@ -1,7 +1,7 @@
-package me.sora819.sampleplugin.commands;
+package me.sora819.specialitems.commands;
 
-import me.sora819.sampleplugin.SamplePlugin;
-import me.sora819.sampleplugin.localization.LocalizationHandler;
+import me.sora819.specialitems.SpecialItems;
+import me.sora819.specialitems.localization.LocalizationHandler;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -30,7 +30,7 @@ public class ExampleCommand implements ICommand {
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command cmd, String label, String[] args) {
-        List<String> completions = new ArrayList<>(SamplePlugin.getInstance().getServer().getOnlinePlayers().stream().map(Player::getName).toList());
+        List<String> completions = new ArrayList<>(SpecialItems.getInstance().getServer().getOnlinePlayers().stream().map(Player::getName).toList());
 
         completions.removeIf(option -> !option.toLowerCase().startsWith(args[0].toLowerCase()));
         return completions;

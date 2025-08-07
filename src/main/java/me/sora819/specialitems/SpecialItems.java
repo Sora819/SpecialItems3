@@ -1,6 +1,6 @@
-package me.sora819.sampleplugin;
+package me.sora819.specialitems;
 
-import me.sora819.sampleplugin.localization.LocalizationHandler;
+import me.sora819.specialitems.localization.LocalizationHandler;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.event.Listener;
@@ -10,10 +10,10 @@ import org.reflections.Reflections;
 
 import java.util.Set;
 
-public final class SamplePlugin extends JavaPlugin {
-    private static SamplePlugin instance;
+public final class SpecialItems extends JavaPlugin {
+    private static SpecialItems instance;
 
-    public SamplePlugin() {
+    public SpecialItems() {
         instance = this;
     }
 
@@ -30,7 +30,7 @@ public final class SamplePlugin extends JavaPlugin {
         getLogger().info(LocalizationHandler.getMessage("plugin.disabled"));
     }
 
-    static public SamplePlugin getInstance(){
+    static public SpecialItems getInstance(){
         return instance;
     }
 

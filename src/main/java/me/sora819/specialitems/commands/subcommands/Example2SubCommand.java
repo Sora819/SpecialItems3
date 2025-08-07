@@ -1,7 +1,7 @@
-package me.sora819.sampleplugin.commands.subcommands;
+package me.sora819.specialitems.commands.subcommands;
 
-import me.sora819.sampleplugin.SamplePlugin;
-import me.sora819.sampleplugin.localization.LocalizationHandler;
+import me.sora819.specialitems.SpecialItems;
+import me.sora819.specialitems.localization.LocalizationHandler;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -30,7 +30,7 @@ public class Example2SubCommand implements ISubCommand {
     @Override
     public List<String> getCompletions(String[] args) {
         if (args.length == 1) {
-            return SamplePlugin.getInstance().getServer().getOnlinePlayers().stream().map(Player::getName).toList();
+            return SpecialItems.getInstance().getServer().getOnlinePlayers().stream().map(Player::getName).toList();
         } else if (args.length == 2) {
             return List.of("Test", "Test2", "Test3");
         } else {
@@ -45,7 +45,7 @@ public class Example2SubCommand implements ISubCommand {
             return;
         }
 
-        Player player = SamplePlugin.getInstance().getServer().getPlayer(args[1]);
+        Player player = SpecialItems.getInstance().getServer().getPlayer(args[1]);
         if (player == null) {
             sender.sendMessage(LocalizationHandler.getMessage("error.player_not_found", true));
             return;
