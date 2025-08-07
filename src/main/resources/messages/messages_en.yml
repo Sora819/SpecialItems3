@@ -23,5 +23,5 @@ command:
   item_given: "You got the item: "
 item:
   flying_boots:
-    name: "Flying boots"
-    lore: "By equipping this you gain creative flight"
+    name: "&6Flying boots"
+    lore: "&r&7By equipping this you gain creative flight"

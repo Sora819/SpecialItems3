@@ -23,5 +23,5 @@ command:
   item_given: "Megkaptad a következő tárgyat: "
 item:
   flying_boots:
-    name: "Repülő cipő"
-    lore: "Ha felveszed a cipőt, tudsz majd repülni"
+    name: "&6Repülő cipő"
+    lore: "&r&7Ha felveszed a cipőt, tudsz majd repülni"
