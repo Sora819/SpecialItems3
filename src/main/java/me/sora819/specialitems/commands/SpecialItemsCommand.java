@@ -13,10 +13,10 @@ public class SpecialItemsCommand implements ICommand {
     private static final Map<String, ISubCommand> subCommands = new HashMap<>();
 
     static {
-        autoRegisterSubCommands();
+        registerSubCommands();
     }
 
-    private static void autoRegisterSubCommands() {
+    private static void registerSubCommands() {
         String packageName = SpecialItemsCommand.class.getPackage().getName() + ".subcommands";
         Reflections reflections = new Reflections(packageName);
         Set<Class<? extends ISubCommand>> classes = reflections.getSubTypesOf(ISubCommand.class);
