@@ -25,7 +25,7 @@ public class FlyingBoots implements ICustomItem, Listener {
 
     @Override
     public ItemStack getItemStack() {
-        ItemStack base_item = new ItemStack(Material.DIAMOND_BOOTS);
+        ItemStack base_item = new ItemStack(Material.NETHERITE_BOOTS);
 
         ItemMeta meta = base_item.getItemMeta();
 
