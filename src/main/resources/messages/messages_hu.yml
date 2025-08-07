@@ -8,6 +8,7 @@ error:
   listener_load: "Hiba történt a következő eseményfigyelő inicializálása közben: "
   permission_denied: "Ehhez nincs jogod!"
   item_load: "Hiba történt a következő tárgy inicializálása közben: "
+  recipe_load: "Hiba történt egy barkács recept betöltése közben"
 success:
   command_run: "Parancs sikeresen futtatva"
   command_load: "Parancs sikeresen betöltve: "
@@ -16,6 +17,7 @@ success:
   language_set: "Nyelv sikeresen átállítva magyarra"
   reload: "Konfiguráció újratöltve"
   item_load: "Tárgy sikeresen betöltve: "
+  recipe_load: "Barkács recept sikeresen betöltve: "
 plugin:
   enabled: "Plugin betöltve"
   disabled: "Plugin leállítva"

@@ -8,6 +8,7 @@ error:
   listener_load: "Error when initializing event listener: "
   permission_denied: "You have no permission to do this!"
   item_load: "Error when initializing item: "
+  recipe_load: "Error when initializing a crafting recipe"
 success:
   command_run: "Command successfully run"
   command_load: "Command successfully loaded: "
@@ -16,6 +17,7 @@ success:
   language_set: "Language successfully changed to english"
   reload: "Configuration reloaded"
   item_load: "Item successfully loaded: "
+  recipe_load: "Crafting recipe successfully loaded: "
 plugin:
   enabled: "Plugin enabled"
   disabled: "Plugin disabled"
