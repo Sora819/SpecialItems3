@@ -1,6 +1,7 @@
 package me.sora819.specialitems.config;
 
 import me.sora819.specialitems.localization.LocalizationHandler;
+import me.sora819.specialitems.utils.RecipeManager;
 
 public class ConfigHandler {
     public static ConfigAdapter defaultConfig = new DefaultConfig();
@@ -13,6 +14,8 @@ public class ConfigHandler {
         defaultConfig.reload();
         defaultMessagesConfig.reload();
         recipesConfig.reload();
+        RecipeManager.registerRecipes();
+
         itemsConfig.reload();
 
         messagesConfig = new LocalizationConfig(defaultConfig.get("language"));
