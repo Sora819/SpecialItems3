@@ -83,4 +83,15 @@ public class FlyingBoots implements ICustomItem, Listener {
 
         e.getPlayer().setAllowFlight(checkItem(e.getPlayer().getInventory().getBoots()));
     }
+
+    @EventHandler
+    public void onArmorBreak(PlayerItemBreakEvent e) {
+        if (e.getPlayer().getGameMode() == GameMode.CREATIVE) {
+            return;
+        }
+
+        if (checkItem(e.getBrokenItem())) {
+            e.getPlayer().setAllowFlight(checkItem(e.getPlayer().getInventory().getBoots()));
+        }
+    }
 }
