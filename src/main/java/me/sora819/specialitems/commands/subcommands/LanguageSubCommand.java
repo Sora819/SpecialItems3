@@ -1,6 +1,5 @@
 package me.sora819.specialitems.commands.subcommands;
 
-import me.sora819.specialitems.SpecialItems;
 import me.sora819.specialitems.localization.LocalizationHandler;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -45,7 +44,7 @@ public class LanguageSubCommand implements ISubCommand {
             return;
         }
 
-        LocalizationHandler.setLanguage(args[1]);
+        LocalizationHandler.setLocale(args[1]);
         sender.sendMessage(LocalizationHandler.getMessage("success.language_set", true));
     }
 }

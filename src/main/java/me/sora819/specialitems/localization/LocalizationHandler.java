@@ -41,7 +41,7 @@ public class LocalizationHandler {
         return includePrefix ? ChatColor.translateAlternateColorCodes('&', prefix + message ) : ChatColor.translateAlternateColorCodes('&', message);
     }
 
-    public static void setLanguage(String language) {
+    public static void setLocale(String language) {
         ConfigHandler.defaultConfig.set("language", language);
         messagesConfig = new LocalizationConfig(language);
     }
