@@ -19,7 +19,7 @@ public class LocalizationConfig implements ConfigAdapter{
     private YamlConfiguration config;
 
     public LocalizationConfig(String language) {
-        this("messages/messages_" + language + ".yml", "messages/messages_" + language + ".yml");
+        this("locale/locale_" + language + ".yml", "locale/locale_" + language + ".yml");
     }
 
 
