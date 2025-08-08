@@ -94,4 +94,15 @@ public class FlyingBoots implements ICustomItem, Listener {
             e.getPlayer().setAllowFlight(checkItem(e.getPlayer().getInventory().getBoots()));
         }
     }
+
+    @EventHandler
+    public void onGameModeChange(PlayerGameModeChangeEvent e) {
+        boolean isFlying = e.getPlayer().isFlying();
+
+        // We have to wait for the next tick, so that we can correctly update flight
+        Bukkit.getScheduler().runTask(SpecialItems.getInstance(), () -> {
+            e.getPlayer().setAllowFlight(checkItem(e.getPlayer().getInventory().getBoots()));
+            e.getPlayer().setFlying(e.getPlayer().getAllowFlight() && isFlying);
+        });
+    }
 }
