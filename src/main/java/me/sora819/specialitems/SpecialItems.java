@@ -1,5 +1,6 @@
 package me.sora819.specialitems;
 
+import me.sora819.specialitems.config.ConfigHandler;
 import me.sora819.specialitems.items.ItemRegistry;
 import me.sora819.specialitems.localization.LocalizationHandler;
 import me.sora819.specialitems.utils.RecipeManager;
@@ -21,6 +22,7 @@ public final class SpecialItems extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        ConfigHandler.reloadConfigurations();
         setCommandExecutors();
         registerListeners();
         ItemRegistry.registerCustomItems();

@@ -14,8 +14,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.Set;
 
 public class LocalizationConfig implements ConfigAdapter{
-    private final File targetFile;
-    private final String sourceFile;
+    private File targetFile;
+    private String sourceFile;
     private YamlConfiguration config;
 
     public LocalizationConfig(String language) {
@@ -29,7 +29,14 @@ public class LocalizationConfig implements ConfigAdapter{
 
         if (!targetFile.exists()) {
             targetFile.getParentFile().mkdirs();
-            SpecialItems.getInstance().saveResource(sourceFile, false);
+            try {
+                SpecialItems.getInstance().saveResource(sourceFile, false);
+            } catch (Exception e) {
+                this.sourceFile = "locale/locale_en.yml";
+                this.targetFile = new File(SpecialItems.getInstance().getDataFolder(), sourceFile);
+                SpecialItems.getInstance().saveResource(sourceFile, false);
+                SpecialItems.getInstance().getLogger().warning(LocalizationHandler.getMessage("error.language_defaulting"));
+            }
         }
 
         config = YamlConfiguration.loadConfiguration(targetFile);

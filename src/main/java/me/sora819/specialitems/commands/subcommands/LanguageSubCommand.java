@@ -4,9 +4,7 @@ import me.sora819.specialitems.SpecialItems;
 import me.sora819.specialitems.localization.LocalizationHandler;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class LanguageSubCommand implements ISubCommand {
@@ -30,7 +28,7 @@ public class LanguageSubCommand implements ISubCommand {
     @Override
     public List<String> getCompletions(String[] args) {
         return switch (args.length) {
-            case 1 -> List.of("en", "hu");
+            case 1 -> LocalizationHandler.getLocales();
             default -> List.of();
         };
     }
@@ -39,6 +37,12 @@ public class LanguageSubCommand implements ISubCommand {
     public void execute(CommandSender sender, Command cmd, String label, String[] args) {
         if (args.length != 2) {
             sender.sendMessage(LocalizationHandler.getMessage("error.invalid_argument_count", true));
+            return;
+        }
+
+        if (!LocalizationHandler.getLocales().contains(args[1])) {
+            sender.sendMessage(LocalizationHandler.getMessage("error.invalid_language", true));
+            return;
         }
 
         LocalizationHandler.setLanguage(args[1]);
