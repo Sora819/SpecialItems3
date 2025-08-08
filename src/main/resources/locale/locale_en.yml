@@ -9,6 +9,8 @@ error:
   permission_denied: "You have no permission to do this!"
   item_load: "Error when initializing item: "
   recipe_load: "Error when initializing a crafting recipe"
+  invalid_language: "Language is not supported (or incorrect language key)"
+  language_defaulting: "Tried to load incorrect locale file, so defaulted to english"
 success:
   command_run: "Command successfully run"
   command_load: "Command successfully loaded: "

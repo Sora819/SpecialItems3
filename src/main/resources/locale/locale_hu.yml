@@ -9,6 +9,8 @@ error:
   permission_denied: "Ehhez nincs jogod!"
   item_load: "Hiba történt a következő tárgy inicializálása közben: "
   recipe_load: "Hiba történt egy barkács recept betöltése közben"
+  invalid_language: "Nem támogatott nyelv (vagy hibás nyelv kód)"
+  language_defaulting: "Hibás vagy nem létező fordítás betöltése nem sikerült, úgyhogy helyette az angol fordítás került betöltésre"
 success:
   command_run: "Parancs sikeresen futtatva"
   command_load: "Parancs sikeresen betöltve: "
