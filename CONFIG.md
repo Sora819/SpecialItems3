@@ -1,4 +1,4 @@
-# Config.yml
+# config.yml
 The basic configuration of the plugin
 
 ## General settings
