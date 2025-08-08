@@ -52,15 +52,15 @@ public class LocalizationHandler {
         String[] localeFiles = (new File(SpecialItems.getInstance().getDataFolder()+"/locale")).list();
         String[] defaultLocales = {"en", "hu"};
 
+        locales.addAll(Arrays.asList(defaultLocales));
         locales.addAll(
             Arrays.asList(
                 localeFiles != null ?
                     Arrays.stream(localeFiles)
                         .map(name -> name.replace("locale_", "").replace(".yml", ""))
-                        .distinct()
+                        .filter(name -> !locales.contains(name))
                         .toArray(String[]::new) :
                     new String[0]));
-        locales.addAll(Arrays.asList(defaultLocales));
 
         return locales;
     }
