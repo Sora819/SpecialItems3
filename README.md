@@ -5,3 +5,5 @@ This version is made for Minecraft 1.21.8, Spigot
 
 ### Configuration
 - **config.yml**: [General configuration documentation](CONFIG.md)
+- **items.yml**: [Items configuration documentation](ITEMS.md)
+- **recipes.yml**: [Recipes configuration documentation](RECIPES.md)
