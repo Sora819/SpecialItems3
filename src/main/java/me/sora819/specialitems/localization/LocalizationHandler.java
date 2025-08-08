@@ -50,7 +50,6 @@ public class LocalizationHandler {
         List<String> locales = new ArrayList<>();
 
         String[] localeFiles = (new File(SpecialItems.getInstance().getDataFolder()+"/locale")).list();
-        SpecialItems.getInstance().getLogger().info(Arrays.toString(localeFiles));
         String[] defaultLocales = {"en", "hu"};
 
         locales.addAll(
