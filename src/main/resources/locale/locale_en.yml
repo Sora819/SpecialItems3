@@ -19,6 +19,7 @@ success:
   language_set: "Language successfully changed to english"
   reload: "Configuration reloaded"
   item_load: "Item successfully loaded: "
+  item_unload: "Item successfully unloaded: "
   recipe_load: "Crafting recipe successfully loaded: "
 plugin:
   enabled: "Plugin enabled"

@@ -38,6 +38,8 @@ public final class SpecialItems extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        ItemRegistry.unregisterCustomItems();
+        timer.cancel();
         getLogger().info(LocalizationHandler.getMessage("plugin.disabled"));
     }
 

@@ -31,6 +31,15 @@ public class ItemRegistry {
         }
     }
 
+    public static void unregisterCustomItems() {
+        for (ICustomItem item : itemMap.values()) {
+            if (TimerTask.class.isAssignableFrom(item.getClass()) && item.getInterval() != null) {
+                ((TimerTask) item).cancel();
+            }
+            SpecialItems.getInstance().getLogger().info(LocalizationHandler.getMessage("success.item_unload") + item.getID());
+        }
+    }
+
     public static ICustomItem getItem(String id) {
         return itemMap.get(id);
     }

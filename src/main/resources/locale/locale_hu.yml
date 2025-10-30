@@ -19,6 +19,7 @@ success:
   language_set: "Nyelv sikeresen átállítva magyarra"
   reload: "Konfiguráció újratöltve"
   item_load: "Tárgy sikeresen betöltve: "
+  item_unload: "Tárgy sikeresen kikapcsolva: "
   recipe_load: "Barkács recept sikeresen betöltve: "
 plugin:
   enabled: "Plugin betöltve"
