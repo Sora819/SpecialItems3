@@ -35,6 +35,9 @@ public class RecipeManager {
     }
 
     public static void unregisterRecipes() {
-        recipeMap.forEach((key, _) -> SpecialItems.getInstance().getServer().removeRecipe(new NamespacedKey(SpecialItems.getInstance(), key)));
+        recipeMap.forEach((key, _) -> {
+            SpecialItems.getInstance().getServer().removeRecipe(new NamespacedKey(SpecialItems.getInstance(), key));
+            recipeMap.remove(key);
+        });
     }
 }

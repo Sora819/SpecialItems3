@@ -28,4 +28,7 @@ command:
 item:
   flying_boots:
     name: "&6Flying boots"
-    lore: "&r&7By equipping this you gain creative flight"
+    lore: "&r&7By equipping this item you gain creative flight"
+  repair_talisman:
+    name: "&6Repair talisman"
+    lore: "&r&7By having this item in your inventory, your items slowly repair themselves"

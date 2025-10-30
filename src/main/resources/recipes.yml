@@ -9,3 +9,15 @@ flying_boots:
     S: NETHER_STAR
     N: NETHERITE_BOOTS
   result: "flying_boots"
+
+repair_talisman:
+  type: shaped
+  shape:
+    - "GEG"
+    - "GAG"
+    - "GGG"
+  ingredients:
+    G: GOLD_BLOCK
+    E: EMERALD_BLOCK
+    A: GOLDEN_APPLE
+  result: "repair_talisman"

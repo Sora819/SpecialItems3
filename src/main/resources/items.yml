@@ -1,2 +1,7 @@
 flying_boots:
   craftable: true
+
+repair_talisman:
+  craftable: true
+  repair_amount: 1
+  interval: 1

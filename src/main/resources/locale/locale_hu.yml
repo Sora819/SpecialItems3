@@ -29,3 +29,6 @@ item:
   flying_boots:
     name: "&6Repülő cipő"
     lore: "&r&7Ha felveszed a cipőt, tudsz majd repülni"
+  repair_talisman:
+    name: "&6Javító talizmán"
+    lore: "&r&7Amíg a talizmán a hátizsákodban van, minden tárgy javítja magát idővel"

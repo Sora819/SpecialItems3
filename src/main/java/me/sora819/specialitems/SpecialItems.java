@@ -12,9 +12,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.reflections.Reflections;
 
 import java.util.Set;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public final class SpecialItems extends JavaPlugin {
     private static SpecialItems instance;
+    private static Timer timer;
 
     public SpecialItems() {
         instance = this;
@@ -22,6 +25,8 @@ public final class SpecialItems extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        timer = new Timer();
+
         ConfigHandler.reloadConfigurations();
         setCommandExecutors();
         registerListeners();
@@ -38,6 +43,10 @@ public final class SpecialItems extends JavaPlugin {
 
     static public SpecialItems getInstance(){
         return instance;
+    }
+
+    static public void runAtIntervals(TimerTask task, int interval) {
+        timer.scheduleAtFixedRate(task, 0, interval * 1000L);
     }
 
     /**

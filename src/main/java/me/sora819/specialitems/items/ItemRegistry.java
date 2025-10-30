@@ -19,8 +19,11 @@ public class ItemRegistry {
         for (Class<? extends ICustomItem> clazz : classes) {
             try {
                 ICustomItem item = clazz.getDeclaredConstructor().newInstance();
+                if (TimerTask.class.isAssignableFrom(clazz) && item.getInterval() != null) {
+                    SpecialItems.runAtIntervals((TimerTask) item, item.getInterval());
+                }
                 itemMap.put(item.getID().toLowerCase(), item);
-                SpecialItems.getInstance().getLogger().info(LocalizationHandler.getMessage("success.item_load") + item.getName());
+                SpecialItems.getInstance().getLogger().info(LocalizationHandler.getMessage("success.item_load") + item.getID());
             } catch (Exception e) {
                 SpecialItems.getInstance().getLogger().warning(LocalizationHandler.getMessage("error.item_load") + clazz.getSimpleName());
                 SpecialItems.getInstance().getLogger().warning(e.toString());

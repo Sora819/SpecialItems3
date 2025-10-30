@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 public interface ICustomItem {
     String getID();
     ItemStack getItemStack();
+    default Integer getInterval() { return null; }
 
     default Set<CustomRecipe> getRecipes() throws Exception {
         Set<String> recipeIDs = ConfigHandler.recipesConfig.getKeys();
