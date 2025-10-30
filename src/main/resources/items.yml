@@ -3,15 +3,18 @@ flying_boots:
 
 repair_talisman:
   craftable: true
+  effect_stackable: false
   repair_amount: 1
   interval: 1
 
 healing_talisman:
   craftable: true
+  effect_stackable: false
   heal_amount: 1
   interval: 1
 
 feeding_talisman:
   craftable: true
+  effect_stackable: false
   feed_amount: 1
   interval: 1

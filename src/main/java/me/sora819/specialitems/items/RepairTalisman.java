@@ -23,6 +23,7 @@ public class RepairTalisman extends TimerTask implements ICustomItem {
     }
     public Integer getInterval() { return ConfigHandler.itemsConfig.get(getID() + ".interval"); }
     public Integer getRepairAmount() { return ConfigHandler.itemsConfig.get(getID() + ".repair_amount"); }
+    public Boolean isEffectStackable() {return  ConfigHandler.itemsConfig.get(getID() + ".effect_stackable"); }
 
     @Override
     public ItemStack getItemStack() {
@@ -51,12 +52,12 @@ public class RepairTalisman extends TimerTask implements ICustomItem {
             PlayerInventory inventory = player.getInventory();
 
             if (InventoryHelper.isItemPresent(this, inventory)) {
-                inventory.forEach(this::repairItem);
+                inventory.forEach(item -> repairItem(item, InventoryHelper.getItemCount(this, inventory)));
             }
         }
     }
 
-    public void repairItem(ItemStack itemStack) {
+    public void repairItem(ItemStack itemStack, int talismanCount) {
         if (itemStack == null) {
             return;
         }
@@ -64,7 +65,7 @@ public class RepairTalisman extends TimerTask implements ICustomItem {
         Damageable meta = (Damageable) itemStack.getItemMeta();
 
         if (meta != null && meta.hasDamage()) {
-            meta.setDamage( meta.getDamage() - getRepairAmount());
+            meta.setDamage( meta.getDamage() - (getRepairAmount() * (isEffectStackable() ? talismanCount : 1)));
         }
 
         itemStack.setItemMeta(meta);

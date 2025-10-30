@@ -24,6 +24,7 @@ public class FeedingTalisman extends TimerTask implements ICustomItem {
     }
     public Integer getInterval() { return ConfigHandler.itemsConfig.get(getID() + ".interval"); }
     public Integer getFeedAmount() { return ConfigHandler.itemsConfig.get(getID() + ".feed_amount"); }
+    public Boolean isEffectStackable() {return  ConfigHandler.itemsConfig.get(getID() + ".effect_stackable"); }
 
     @Override
     public ItemStack getItemStack() {
@@ -52,7 +53,11 @@ public class FeedingTalisman extends TimerTask implements ICustomItem {
             PlayerInventory inventory = player.getInventory();
 
             if (InventoryHelper.isItemPresent(this, inventory)) {
-                player.setFoodLevel( Math.min(20, player.getFoodLevel() + getFeedAmount()) );
+                player.setFoodLevel(
+                    Math.min(
+                        20,
+                        player.getFoodLevel() + (getFeedAmount() * (isEffectStackable() ? InventoryHelper.getItemCount(this, inventory) : 1)))
+                );
             }
         }
     }

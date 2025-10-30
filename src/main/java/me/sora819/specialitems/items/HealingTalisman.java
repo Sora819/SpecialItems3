@@ -25,6 +25,7 @@ public class HealingTalisman extends TimerTask implements ICustomItem {
     }
     public Integer getInterval() { return ConfigHandler.itemsConfig.get(getID() + ".interval"); }
     public Integer getHealAmount() { return ConfigHandler.itemsConfig.get(getID() + ".heal_amount"); }
+    public Boolean isEffectStackable() {return  ConfigHandler.itemsConfig.get(getID() + ".effect_stackable"); }
 
     @Override
     public ItemStack getItemStack() {
@@ -58,7 +59,12 @@ public class HealingTalisman extends TimerTask implements ICustomItem {
                     continue;
                 }
 
-                player.setHealth(Math.min(maxHealthAttribute.getValue(), player.getHealth() + getHealAmount()));
+                player.setHealth(
+                    Math.min(
+                        maxHealthAttribute.getValue(),
+                        player.getHealth() + (getHealAmount() * (isEffectStackable() ? InventoryHelper.getItemCount(this, inventory) : 1))
+                    )
+                );
             }
         }
     }
