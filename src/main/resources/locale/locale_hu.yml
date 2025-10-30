@@ -39,3 +39,6 @@ item:
   feeding_talisman:
     name: "&6Éhség talizmán"
     lore: "&r&7Amíg a talizmán a hátizsákodban van, lassan elmúlik az éhséged"
+  explosive_pickaxe:
+    name: "&6Robbanó csákány"
+    lore: "&r&7Ezzel a csákánnyal 3x3-as formában tudsz bányászni"

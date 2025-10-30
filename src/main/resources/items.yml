@@ -18,3 +18,6 @@ feeding_talisman:
   effect_stackable: false
   feed_amount: 1
   interval: 1
+
+explosive_pickaxe:
+  craftable: true

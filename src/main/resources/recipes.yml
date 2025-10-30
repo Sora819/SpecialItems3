@@ -45,3 +45,15 @@ feeding_talisman:
     E: EMERALD_BLOCK
     A: GOLDEN_APPLE
   result: "feeding_talisman"
+
+explosive_pickaxe:
+  type: shaped
+  shape:
+    - "TTT"
+    - "GPG"
+    - "GGG"
+  ingredients:
+    T: TNT
+    G: GUNPOWDER
+    P: NETHERITE_PICKAXE
+  result: "explosive_pickaxe"

@@ -39,3 +39,6 @@ item:
   feeding_talisman:
     name: "&6Feeding talisman"
     lore: "&r&7By having this item in your inventory, your hunger bar will slowly fill"
+  explosive_pickaxe:
+    name: "&6Explosive pickaxe"
+    lore: "&r&7When using this pickaxe you can mine in a 3x3 formation"
