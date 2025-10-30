@@ -20,7 +20,7 @@ public interface ICustomItem {
         Set<String> recipeIDs = ConfigHandler.recipesConfig.getKeys();
 
         recipeIDs = recipeIDs.stream()
-                .filter(id -> ItemRegistry.getItemIDs().contains(ConfigHandler.recipesConfig.<String>get(id + ".result")))
+                .filter(id -> ConfigHandler.recipesConfig.<String>get(id + ".result").equals(getID()) )
                 .collect(Collectors.toSet());
 
         Set<CustomRecipe> recipes = new HashSet<>();
