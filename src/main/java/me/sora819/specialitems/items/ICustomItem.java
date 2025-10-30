@@ -48,7 +48,7 @@ public interface ICustomItem {
     }
 
     default List<String> getLore() {
-        return List.of(LocalizationHandler.getMessage("item.flying_boots.lore"));
+        return List.of(LocalizationHandler.getMessage("item." + getID() + ".lore"));
     }
 
     default boolean checkItem(ItemStack item) {
