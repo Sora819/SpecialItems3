@@ -5,3 +5,13 @@ repair_talisman:
   craftable: true
   repair_amount: 1
   interval: 1
+
+healing_talisman:
+  craftable: true
+  heal_amount: 1
+  interval: 1
+
+feeding_talisman:
+  craftable: true
+  feed_amount: 1
+  interval: 1

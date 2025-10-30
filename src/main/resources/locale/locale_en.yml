@@ -32,3 +32,9 @@ item:
   repair_talisman:
     name: "&6Repair talisman"
     lore: "&r&7By having this item in your inventory, your items slowly repair themselves"
+  healing_talisman:
+    name: "&6Healing talisman"
+    lore: "&r&7By having this item in your inventory, you will be slowly healed"
+  feeding_talisman:
+    name: "&6Feeding talisman"
+    lore: "&r&7By having this item in your inventory, your hunger bar will slowly fill"

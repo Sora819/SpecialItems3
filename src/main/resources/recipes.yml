@@ -14,10 +14,34 @@ repair_talisman:
   type: shaped
   shape:
     - "GEG"
+    - "GRG"
+    - "GGG"
+  ingredients:
+    G: GOLD_BLOCK
+    E: EMERALD_BLOCK
+    R: REDSTONE_BLOCK
+  result: "repair_talisman"
+
+healing_talisman:
+  type: shaped
+  shape:
+    - "GEG"
+    - "GAG"
+    - "GGG"
+  ingredients:
+    G: GOLD_BLOCK
+    E: EMERALD_BLOCK
+    A: ENCHANTED_GOLDEN_APPLE
+  result: "healing_talisman"
+
+feeding_talisman:
+  type: shaped
+  shape:
+    - "GEG"
     - "GAG"
     - "GGG"
   ingredients:
     G: GOLD_BLOCK
     E: EMERALD_BLOCK
     A: GOLDEN_APPLE
-  result: "repair_talisman"
+  result: "feeding_talisman"

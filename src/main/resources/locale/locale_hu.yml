@@ -32,3 +32,9 @@ item:
   repair_talisman:
     name: "&6Javító talizmán"
     lore: "&r&7Amíg a talizmán a hátizsákodban van, minden tárgy javítja magát idővel"
+  healing_talisman:
+    name: "&6Gyógyító talizmán"
+    lore: "&r&7Amíg a talizmán a hátizsákodban van, lassan gyógyítani fog"
+  feeding_talisman:
+    name: "&6Éhség talizmán"
+    lore: "&r&7Amíg a talizmán a hátizsákodban van, lassan elmúlik az éhséged"
