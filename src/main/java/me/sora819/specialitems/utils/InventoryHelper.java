@@ -25,7 +25,7 @@ public class InventoryHelper {
         AtomicInteger count = new AtomicInteger();
 
         inventory.forEach(itemStack -> {
-            if (itemStack != null && itemStack.isSimilar(item.getItemStack())) {
+            if (itemStack != null && item.checkItem(itemStack)) {
                 count.set(count.get() + itemStack.getAmount());
             }
         });
