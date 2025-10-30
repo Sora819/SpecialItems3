@@ -52,7 +52,16 @@ public class RepairTalisman extends TimerTask implements ICustomItem {
             PlayerInventory inventory = player.getInventory();
 
             if (InventoryHelper.isItemPresent(this, inventory)) {
-                inventory.forEach(item -> repairItem(item, InventoryHelper.getItemCount(this, inventory)));
+                int talismanCount =  InventoryHelper.getItemCount(this, inventory);
+
+                for (int i = 0; i < inventory.getSize(); i++) {
+                    if (i == inventory.getHeldItemSlot()) {
+                        continue;
+                    }
+
+                    ItemStack item = inventory.getItem(i);
+                    repairItem(item, talismanCount);
+                }
             }
         }
     }
