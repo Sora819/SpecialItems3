@@ -33,6 +33,7 @@ public class RepairTalisman extends TimerTask implements ICustomItem {
         if (meta != null) {
             meta.setItemName(getName());
             meta.setLore(getLore());
+            meta.setMaxStackSize(1);
         }
 
         base_item.setItemMeta(meta);
