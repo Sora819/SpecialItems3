@@ -42,3 +42,6 @@ item:
   explosive_pickaxe:
     name: "&6Robbanó csákány"
     lore: "&r&7Ezzel a csákánnyal 3x3-as formában tudsz bányászni"
+  lucky_charm:
+    name: "&6Szerencse talizmán"
+    lore: "&r&7Extra szerencséd lesz, ha ez a talizmán a hátizsákodban van"

@@ -21,3 +21,7 @@ feeding_talisman:
 
 explosive_pickaxe:
   craftable: true
+
+lucky_charm:
+  craftable: true
+  effect_stackable: true

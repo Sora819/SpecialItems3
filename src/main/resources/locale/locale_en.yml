@@ -42,3 +42,6 @@ item:
   explosive_pickaxe:
     name: "&6Explosive pickaxe"
     lore: "&r&7When using this pickaxe you can mine in a 3x3 formation"
+  lucky_charm:
+    name: "&6Lucky charm"
+    lore: "&r&7You get extra lucky when you have this talisman in your inventory"
