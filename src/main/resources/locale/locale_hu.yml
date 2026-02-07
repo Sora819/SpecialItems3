@@ -45,3 +45,14 @@ item:
   lucky_charm:
     name: "&6Szerencse talizmán"
     lore: "&r&7Extra szerencséd lesz, ha ez a talizmán a hátizsákodban van"
+  soul_stealing_sword:
+    name: "&6Léleklopó kard"
+    lore: "&r&7Ez a kard el tudja lopni a megölt entitások lelkét, amivel pedig erősebb lesz"
+    kills: "&r&cLelkek: {kills}"
+  mob_catcher:
+    name: "&6Élőlény befogó"
+    lore: "&r&7Jobb klikkel befoghatsz egy mobot, és jobb klikkel egy blokkra el is engedheted"
+    already_has_entity: "&cEbben a tárgyban már van egy entitás"
+    dont_have_entity: "&cEbben a tárgyban még nincs entitás"
+    no_entity_lore: "&r&cNincs entitás"
+    entity_lore: "&r&aEntitás: {entity}"

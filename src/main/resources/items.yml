@@ -25,3 +25,10 @@ explosive_pickaxe:
 lucky_charm:
   craftable: true
   effect_stackable: true
+
+soul_stealing_sword:
+  craftable: true
+
+mob_catcher:
+  craftable: true
+  entity_blacklist: ["ENDER_DRAGON", "WITHER"]

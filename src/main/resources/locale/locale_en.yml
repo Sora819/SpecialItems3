@@ -45,3 +45,14 @@ item:
   lucky_charm:
     name: "&6Lucky charm"
     lore: "&r&7You get extra lucky when you have this talisman in your inventory"
+  soul_stealing_sword:
+    name: "&6Soul stealing sword"
+    lore: "&r&7This sword can steal the soul of entities killed with it, becoming stronger in the process"
+    kills: "&r&cSouls: {kills}"
+  mob_catcher:
+    name: "&6Mob catcher"
+    lore: "&r&7You can catch a mob by right clicking on them, and release them by right clicking on a block"
+    already_has_entity: "&cThere is already an entity in this item"
+    dont_have_entity: "&cThere is no entity in this item"
+    no_entity_lore: "&r&cNo entity"
+    entity_lore: "&r&aEntity: {entity}"
