@@ -57,3 +57,41 @@ explosive_pickaxe:
     G: GUNPOWDER
     P: NETHERITE_PICKAXE
   result: "explosive_pickaxe"
+
+lucky_charm:
+  type: shaped
+  shape:
+    - "GEG"
+    - "OTO"
+    - "GEG"
+  ingredients:
+    G: GOLD_BLOCK
+    E: EMERALD_BLOCK
+    O: OBSIDIAN
+    T: TOTEM_OF_UNDYING
+  result: "lucky_charm"
+
+soul_stealing_sword:
+  type: shaped
+  shape:
+    - " S "
+    - " N "
+    - " O "
+  ingredients:
+    S: SOUL_SAND
+    N: NETHERITE_SWORD
+    O: WITHER_SKELETON_SKULL
+  result: "soul_stealing_sword"
+
+mob_catcher:
+  type: shaped
+  shape:
+    - " E "
+    - "NSN"
+    - " O "
+  ingredients:
+    E: END_CRYSTAL
+    N: NETHER_STAR
+    S: SHULKER_SHELL
+    O: OBSIDIAN
+  result: "mob_catcher"
