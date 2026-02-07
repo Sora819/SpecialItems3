@@ -54,7 +54,7 @@ public class NBTManager {
 
         for (NamespacedKey key : nbt.getKeys()) {
             for (PersistentDataType type : persistentDataTypes) {
-                if (meta.getPersistentDataContainer().has(key, type)) {
+                if (nbt.has(key, type)) {
                     nbtMap.put(key, nbt.get(key, type));
                     break;
                 }
@@ -73,6 +73,19 @@ public class NBTManager {
 
         NamespacedKey nKey = new NamespacedKey(SpecialItems.getInstance(), key);
         meta.getPersistentDataContainer().set(nKey, typeToPersistentDataTypeMap.get(value.getClass()), value);
+
+        item.setItemMeta(meta);
+    }
+
+    static public void removeNBT(ItemStack item, String key) {
+        ItemMeta meta = item.getItemMeta();
+
+        if (meta == null) {
+            return;
+        }
+
+        NamespacedKey nKey = new NamespacedKey(SpecialItems.getInstance(), key);
+        meta.getPersistentDataContainer().remove(nKey);
 
         item.setItemMeta(meta);
     }
