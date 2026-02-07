@@ -11,6 +11,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.reflections.Reflections;
 
+import java.io.File;
 import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -32,6 +33,7 @@ public final class SpecialItems extends JavaPlugin {
         registerListeners();
         ItemRegistry.registerCustomItems();
         RecipeManager.registerRecipes();
+        copyDocumentationIfNotExist();
 
         getLogger().info(LocalizationHandler.getMessage("plugin.enabled"));
     }
@@ -98,5 +100,20 @@ public final class SpecialItems extends JavaPlugin {
                 getLogger().warning(e.toString());
             }
         }
+    }
+
+    private void copyResource(String resourcePath, boolean overwrite) {
+        File out = new File(getDataFolder(), resourcePath);
+        if (out.exists()) return;
+
+        out.getParentFile().mkdirs();
+        saveResource(resourcePath, overwrite);
+    }
+
+    private void copyDocumentationIfNotExist() {
+        copyResource("documentations/README.md", true);
+        copyResource("documentations/CONFIG.md", true);
+        copyResource("documentations/ITEMS.md", true);
+        copyResource("documentations/RECIPES.md", true);
     }
 }
